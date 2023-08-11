@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Regression Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Linear Regression Calculator</h1>
+            <label for="x">Enter X values (comma-separated):</label>
+            <input type="text" id="x" placeholder="e.g., 1,2,3">
+            
+            <label for="y">Enter Y values (comma-separated):</label>
+            <input type="text" id="y" placeholder="e.g., 4,5,6">
+            
+            <button onclick="calculateRegression()">Calculate</button>
+            
+            <h2 class="result">Results:</h2>
+            <h4 class="result">Slope: <span id="slope"></span></h4>
+            <h4 class="result">Intercept: <span id="intercept"></span></h4>
+            <h4 class="result">Regression Equation: <span id="equation"></span></h4>
+            <h4 class="result">R-squared: <span id="rsquared"></span></h4>
+            
+            <div class="error-container" id="error-container">
+                <p id="error-message" class="error"></p>
+            </div>
+         
+            <h4 class="result">Sum of X^2: <span id="sum-x2" ></span></h4>
+            <h4 class="result">Sum of Y^2: <span id="sum-y2"></span></h4>
+            <h4 class="result">Sum of XY: <span id="sum-xy"></span></h4>
+            <h4 class="result">Sum of X: <span id="sum-x"></span></h4>
+            <h4 class="result">Sum of Y: <span id="sum-y"></span></h4>
+
+
+        </div>
+        
+        <div class="chart-container" id="chart-container">
+            <h2>Regression Chart</h2>
+            <div id="regression-chart"></div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
